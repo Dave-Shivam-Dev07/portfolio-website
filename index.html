@@ -6,8 +6,8 @@
   <style>
     body {
       margin: 0;
-      font-family: Arial;
-      background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(135deg, #000428, #004e92);
       color: white;
     }
 
@@ -15,62 +15,63 @@
       max-width: 900px;
       margin: auto;
       padding: 20px;
-      text-align: center;
     }
 
-    nav {
-      margin-bottom: 20px;
+    .card {
+      background: rgba(255, 255, 255, 0.08);
+      backdrop-filter: blur(10px);
+      border-radius: 15px;
+      padding: 20px;
+      margin: 20px 0;
+      box-shadow: 0 0 20px rgba(0,255,255,0.3);
+      transition: 0.3s;
     }
 
-    nav a {
-      margin: 10px;
-      color: cyan;
-      text-decoration: none;
-      font-weight: bold;
-    }
-
-    nav a:hover {
-      color: orange;
+    .card:hover {
+      transform: scale(1.03);
+      box-shadow: 0 0 30px cyan;
     }
 
     h1 {
-      color: cyan;
-      margin-top: 20px;
+      text-align: center;
+      font-size: 40px;
+      background: linear-gradient(to right, cyan, blue);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
     }
 
     h2 {
-      margin-top: 40px;
-      color: #00ffcc;
+      color: #00ffff;
+      border-bottom: 1px solid rgba(255,255,255,0.2);
+      padding-bottom: 5px;
     }
 
     ul {
-      list-style: none;
-      padding: 0;
+      padding-left: 20px;
     }
 
     li {
-      background: rgba(255,255,255,0.1);
-      margin: 10px 0;
-      padding: 12px;
-      border-radius: 10px;
+      margin: 8px 0;
     }
 
-    button {
-      padding: 10px 20px;
-      background: cyan;
-      border: none;
+    .btn {
+      display: inline-block;
+      padding: 12px 25px;
+      background: linear-gradient(45deg, cyan, blue);
+      color: white;
       border-radius: 10px;
-      cursor: pointer;
+      text-decoration: none;
       margin-top: 10px;
+      transition: 0.3s;
     }
 
-    button:hover {
-      background: orange;
+    .btn:hover {
+      background: linear-gradient(45deg, orange, red);
+      transform: scale(1.05);
     }
 
-    footer {
-      margin-top: 40px;
-      color: #aaa;
+    .center {
+      text-align: center;
     }
   </style>
 </head>
@@ -79,47 +80,45 @@
 
 <div class="container">
 
-  <nav>
-    <a href="#home">Home</a>
-    <a href="#skills">Skills</a>
-    <a href="#projects">Projects</a>
-    <a href="#contact">Contact</a>
-  </nav>
+  <h1>⚡ Dave Shivam</h1>
+  <p class="center">Computer Science Student | Future Developer 🚀</p>
 
-  <h1 id="home">👋 Hello, I'm Shivam</h1>
-  <p>Diploma CSE Student | Web Developer</p>
+  <div class="card">
+    <h2>🎯 Career Objective</h2>
+    <p>Motivated CSE student seeking internship to build real-world projects and skills.</p>
+  </div>
 
-  <h2 id="skills">💻 Skills</h2>
-  <ul>
-    <li>HTML</li>
-    <li>CSS</li>
-    <li>JavaScript</li>
-  </ul>
+  <div class="card">
+    <h2>🎓 Education</h2>
+    <p>Diploma in Computer Science & Engineering<br>Parul University</p>
+  </div>
 
-  <h2 id="projects">🚀 Projects</h2>
-  <ul>
-    <li>Portfolio Website</li>
-    <li>Login & OTP System</li>
-    <li>JARVIS AI Assistant</li>
-  </ul>
+  <div class="card">
+    <h2>💻 Skills</h2>
+    <ul>
+      <li>⚡ C, C++, Java</li>
+      <li>🌐 HTML, CSS, JavaScript</li>
+      <li>🛠 GitHub, VS Code</li>
+      <li>🗄 MySQL</li>
+    </ul>
+  </div>
 
-  <h2 id="contact">📧 Contact</h2>
-  <p>Email: 2403396160032@paruluniversity.ac.in</p>
+  <div class="card">
+    <h2>🚀 Projects</h2>
+    <ul>
+      <li>🔐 Login & OTP System</li>
+      <li>🤖 JARVIS AI Assistant</li>
+      <li>🌐 Portfolio Website</li>
+    </ul>
+  </div>
 
-  <a href="Resume.pdf" download>
-    <button>📄 Download Resume</button>
-  </a>
+  <div class="card">
+    <h2>📧 Contact</h2>
+    <p>Email: Shivamdave.0704@gmail.com</p>
+    <p>Phone: +91 9316378005</p>
 
-  <h2>🌐 Connect with me</h2>
-  <p>
-    <a href="#">LinkedIn</a> |
-    <a href="#">GitHub</a> |
-    <a href="#">Instagram</a>
-  </p>
-
-  <footer>
-    <p>© 2026 Shivam</p>
-  </footer>
+    <a href="Resume.pdf" download class="btn">📄 Download Resume</a>
+  </div>
 
 </div>
 
