@@ -1,126 +1,243 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>Shivam Portfolio</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Shivam Portfolio</title>
 
-  <style>
-    body {
-      margin: 0;
-      font-family: 'Segoe UI', sans-serif;
-      background: linear-gradient(135deg, #000428, #004e92);
-      color: white;
-    }
+<style>
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background: linear-gradient(135deg, #000428, #004e92);
+  color: white;
+  scroll-behavior: smooth;
+}
 
-    .container {
-      max-width: 900px;
-      margin: auto;
-      padding: 20px;
-    }
+/* Container */
+.container {
+  max-width: 1100px;
+  margin: auto;
+  padding: 20px;
+}
 
-    .card {
-      background: rgba(255, 255, 255, 0.08);
-      backdrop-filter: blur(10px);
-      border-radius: 15px;
-      padding: 20px;
-      margin: 20px 0;
-      box-shadow: 0 0 20px rgba(0,255,255,0.3);
-      transition: 0.3s;
-    }
+/* Cards */
+.card {
+  background: rgba(255,255,255,0.08);
+  backdrop-filter: blur(12px);
+  border-radius: 15px;
+  padding: 20px;
+  margin: 20px 0;
+  box-shadow: 0 0 20px rgba(0,255,255,0.3);
+  transition: 0.4s;
+}
 
-    .card:hover {
-      transform: scale(1.03);
-      box-shadow: 0 0 30px cyan;
-    }
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 0 30px cyan;
+}
 
-    h1 {
-      text-align: center;
-      font-size: 40px;
-      background: linear-gradient(to right, cyan, blue);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-    }
+/* Title */
+h1 {
+  text-align: center;
+  font-size: 45px;
+  background: linear-gradient(to right, cyan, blue);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
 
-    h2 {
-      color: #00ffff;
-      border-bottom: 1px solid rgba(255,255,255,0.2);
-      padding-bottom: 5px;
-    }
+h2 {
+  color: cyan;
+}
 
-    ul {
-      padding-left: 20px;
-    }
+/* Typing Animation */
+.typing {
+  text-align: center;
+  font-size: 20px;
+  border-right: 3px solid cyan;
+  width: fit-content;
+  margin: auto;
+  overflow: hidden;
+  white-space: nowrap;
+  animation: typing 4s steps(30), blink 0.7s infinite;
+}
 
-    li {
-      margin: 8px 0;
-    }
+@keyframes typing {
+  from { width: 0 }
+  to { width: 100% }
+}
 
-    .btn {
-      display: inline-block;
-      padding: 12px 25px;
-      background: linear-gradient(45deg, cyan, blue);
-      color: white;
-      border-radius: 10px;
-      text-decoration: none;
-      margin-top: 10px;
-      transition: 0.3s;
-    }
+@keyframes blink {
+  50% { border-color: transparent }
+}
 
-    .btn:hover {
-      background: linear-gradient(45deg, orange, red);
-      transform: scale(1.05);
-    }
+/* Tags */
+.tag {
+  display: inline-block;
+  background: rgba(0,255,255,0.2);
+  padding: 6px 12px;
+  margin: 5px;
+  border-radius: 8px;
+}
 
-    .center {
-      text-align: center;
-    }
-  </style>
+/* Buttons */
+.btn {
+  display: inline-block;
+  padding: 10px 20px;
+  margin: 5px;
+  background: linear-gradient(45deg, cyan, blue);
+  color: white;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.btn:hover {
+  background: linear-gradient(45deg, orange, red);
+}
+
+/* Project Box */
+.project {
+  margin-bottom: 15px;
+  padding: 15px;
+  border-left: 4px solid cyan;
+}
+
+/* Scroll animation */
+.hidden {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 1s;
+}
+
+.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+</style>
 </head>
 
 <body>
 
 <div class="container">
 
-  <h1>⚡ Dave Shivam</h1>
-  <p class="center">Computer Science Student | Future Developer 🚀</p>
+<h1>⚡ Dave Shivam</h1>
+<div class="typing">Full-Stack Developer | AI Engineer | Cloud Builder 🚀</div>
 
-  <div class="card">
-    <h2>🎯 Career Objective</h2>
-    <p>Motivated CSE student seeking internship to build real-world projects and skills.</p>
-  </div>
+<div class="card hidden">
+<h2>✨ Professional Summary</h2>
+<p>
+I am a passionate Full-Stack Developer specializing in building modern web applications, AI systems,
+and cloud-based platforms. I focus on creating futuristic UI designs combined with strong backend systems.
+I enjoy solving real-world problems and building scalable solutions.
+</p>
+</div>
 
-  <div class="card">
-    <h2>🎓 Education</h2>
-    <p>Diploma in Computer Science & Engineering<br>Parul University</p>
-  </div>
+<div class="card hidden">
+<h2>🎓 Education</h2>
+<p>
+Diploma in Computer Science & Engineering <br>
+Parul University (Expected 2027)
+</p>
+</div>
 
-  <div class="card">
-    <h2>💻 Skills</h2>
-    <ul>
-      <li>⚡ C, C++, Java</li>
-      <li>🌐 HTML, CSS, JavaScript</li>
-      <li>🛠 GitHub, VS Code</li>
-      <li>🗄 MySQL</li>
-    </ul>
-  </div>
+<div class="card hidden">
+<h2>💻 Technical Skills</h2>
+<div>
+<span class="tag">Python</span>
+<span class="tag">JavaScript</span>
+<span class="tag">Java</span>
+<span class="tag">HTML</span>
+<span class="tag">CSS</span>
+<span class="tag">React</span>
+<span class="tag">Node.js</span>
+<span class="tag">MongoDB</span>
+<span class="tag">Docker</span>
+<span class="tag">REST API</span>
+</div>
+</div>
 
-  <div class="card">
-    <h2>🚀 Projects</h2>
-    <ul>
-      <li>🔐 Login & OTP System</li>
-      <li>🤖 JARVIS AI Assistant</li>
-      <li>🌐 Portfolio Website</li>
-    </ul>
-  </div>
+<div class="card hidden">
+<h2>🚀 Projects (Detailed)</h2>
 
-  <div class="card">
-    <h2>📧 Contact</h2>
-    <p>Email: Shivamdave.0704@gmail.com</p>
-    <p>Phone: +91 9316378005</p>
+<div class="project">
+<h3>🤖 J.A.R.V.I.S AI Assistant</h3>
+<p>
+A smart AI assistant capable of executing system commands, automation tasks, chatbot responses, and real-time actions.
+Includes GUI interface and intelligent command processing.
+</p>
+<a href="#" class="btn">GitHub</a>
+<a href="#" class="btn">Live Demo</a>
+</div>
 
-    <a href="Resume.pdf" download class="btn">📄 Download Resume</a>
-  </div>
+<div class="project">
+<h3>🔐 Login & OTP Authentication System</h3>
+<p>
+A secure authentication system with modern UI and OTP verification using SMS/email APIs.
+Includes real-time validation and backend integration.
+</p>
+<a href="#" class="btn">GitHub</a>
+<a href="#" class="btn">Live Demo</a>
+</div>
+
+<div class="project">
+<h3>☁️ Cloud Storage Platform</h3>
+<p>
+Full-stack cloud storage system with user authentication, file upload/download, and scalable backend architecture.
+</p>
+<a href="#" class="btn">GitHub</a>
+<a href="#" class="btn">Live Demo</a>
+</div>
+
+<div class="project">
+<h3>💬 Real-Time Chat App</h3>
+<p>
+Live messaging app using WebSockets with chat rooms, authentication, and responsive UI.
+</p>
+<a href="#" class="btn">GitHub</a>
+</div>
+
+<div class="project">
+<h3>🎥 Smart Attendance System</h3>
+<p>
+Face recognition-based attendance system using OpenCV with automatic marking and Excel export.
+</p>
+<a href="#" class="btn">GitHub</a>
+</div>
 
 </div>
+
+<div class="card hidden">
+<h2>🧠 Strengths</h2>
+<ul>
+<li>Quick learner</li>
+<li>Strong problem-solving mindset</li>
+<li>Passion for AI & development</li>
+<li>Good communication skills</li>
+</ul>
+</div>
+
+<div class="card hidden">
+<h2>📧 Contact</h2>
+<p>Email: Shivamdave.0704@gmail.com</p>
+<p>Phone: +91 9316378005</p>
+<a href="Resume.pdf" download class="btn">📄 Download Resume</a>
+</div>
+
+</div>
+
+<script>
+// Scroll Animation
+const observer = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('show');
+    }
+  });
+});
+
+document.querySelectorAll('.hidden').forEach(el => observer.observe(el));
+</script>
 
 </body>
 </html>
